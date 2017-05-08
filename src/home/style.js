@@ -100,10 +100,13 @@ export default  StyleSheet.create({
     },
     addBtn: {
         position: 'absolute',
-        right: 10*rem,
-        bottom: 10*rem,
+        right: 60*rem,
+        bottom: 60*rem,
+        backgroundColor: '#fff',
+        borderRadius: 50*rem,
+    },
+    addImg: {
         width: 100*rem,
         height: 100*rem,
-        backgroundColor: 'red',
     }
 });
