@@ -113,7 +113,13 @@ export default class Home extends Component {
                         </View>
                     </View>
                 </View>
+                <TouchableOpacity style={styles.addBtn} onPress={this._onAddPress}>
+                </TouchableOpacity>
             </ScrollView>
 		)
 	}
+
+    _onAddPress() {
+
+    }
 }

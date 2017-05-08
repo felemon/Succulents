@@ -75,7 +75,7 @@ export default  StyleSheet.create({
         color: '#999',
     },
     listDay: {
-        fontSize: 50*rem,
+        fontSize: 60*rem,
         fontFamily: 'Oswald-Regular',
     },
     listCon: {
@@ -98,4 +98,12 @@ export default  StyleSheet.create({
         marginRight: 10*rem,
         borderRadius: 4*rem,
     },
+    addBtn: {
+        position: 'absolute',
+        right: 10*rem,
+        bottom: 10*rem,
+        width: 100*rem,
+        height: 100*rem,
+        backgroundColor: 'red',
+    }
 });
