@@ -15,8 +15,8 @@ export default class Home extends Component {
             <View style={this.props.style}>
                 <ScrollView>
                     <View style={styles.head}>
-                        <Image style={styles.headBg} blurRadius={2} source={require('./img/icon.jpg')} />
-                        <Image style={styles.headIcon} source={require('./img/icon.jpg')} />
+                        <Image style={styles.headBg} blurRadius={1} source={require('./img/icon2.png')} />
+                        <Image style={styles.headIcon} source={require('./img/icon2.png')} />
                         <Text style={styles.headName}>小柠多肉馆</Text>
                         <Text style={styles.headDesc}>A succulover @duorouji.com</Text>
                     </View>
