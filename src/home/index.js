@@ -10,7 +10,11 @@ import {
 import styles from './style.js';
 
 export default class Home extends Component {
+    static navigationOptions = {
+        header: null
+    };
 	render() {
+        const { navigate } = this.props.navigation;
 		return (
             <View style={this.props.style}>
                 <ScrollView>
@@ -23,26 +27,26 @@ export default class Home extends Component {
                     <View style={[styles.categoryWrap]}>
                         <Text style={styles.blockTitle}>萌肉记忆</Text>
                         <ScrollView horizontal>
-                                <View style={styles.category}>
-                                    <Image style={styles.categoryImg} source={require('./img/cat2.jpg')} />
-                                    <Text style={styles.categoryName}>艾伦</Text>
-                                </View>
-                                <View style={styles.category}>
-                                    <Image style={styles.categoryImg} source={require('./img/cat3.jpg')} />
-                                    <Text style={styles.categoryName}>春之奇迹</Text>
-                                </View>
-                                <View style={styles.category}>
-                                    <Image style={styles.categoryImg} source={require('./img/cat4.jpg')} />
-                                    <Text style={styles.categoryName}>静夜</Text>
-                                </View>
-                                <View style={styles.category}>
-                                    <Image style={styles.categoryImg} source={require('./img/cat5.jpg')} />
-                                    <Text style={styles.categoryName}>初恋</Text>
-                                </View>
-                                <View style={styles.category}>
-                                    <Image style={styles.categoryImg} source={require('./img/cat1.jpg')} />
-                                    <Text style={styles.categoryName}>桃蛋</Text>
-                                </View>             
+                            <View style={styles.category}>
+                                <Image style={styles.categoryImg} source={require('./img/cat2.jpg')} />
+                                <Text style={styles.categoryName}>艾伦</Text>
+                            </View>
+                            <View style={styles.category}>
+                                <Image style={styles.categoryImg} source={require('./img/cat3.jpg')} />
+                                <Text style={styles.categoryName}>春之奇迹</Text>
+                            </View>
+                            <View style={styles.category}>
+                                <Image style={styles.categoryImg} source={require('./img/cat4.jpg')} />
+                                <Text style={styles.categoryName}>静夜</Text>
+                            </View>
+                            <View style={styles.category}>
+                                <Image style={styles.categoryImg} source={require('./img/cat5.jpg')} />
+                                <Text style={styles.categoryName}>初恋</Text>
+                            </View>
+                            <View style={styles.category}>
+                                <Image style={styles.categoryImg} source={require('./img/cat1.jpg')} />
+                                <Text style={styles.categoryName}>桃蛋</Text>
+                            </View>
                         </ScrollView>
                     </View>
                     <View style={styles.listWrap}>
@@ -116,14 +120,10 @@ export default class Home extends Component {
                         </View>
                     </View>
                 </ScrollView>
-                <TouchableHighlight underlayColor="#E8E8E8" style={styles.addBtn} onPress={this._onAddPress}>
+                <TouchableHighlight underlayColor="#E8E8E8" style={styles.addBtn} onPress={ () => navigate('CategoryAdd')}>
                     <Image style={styles.addImg} source={require('./img/add.png')} />
                 </TouchableHighlight>
             </View>
 		)
 	}
-
-    _onAddPress() {
-        console.log('press');
-    }
 }
